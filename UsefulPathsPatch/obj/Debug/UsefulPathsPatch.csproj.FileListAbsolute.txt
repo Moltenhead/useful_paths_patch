@@ -1,0 +1,13 @@
+D:\Projets\Harmony\Valheim\UsefulPathsPatch\UsefulPathsPatch\bin\Debug\UsefulPathsPatch.dll
+D:\Projets\Harmony\Valheim\UsefulPathsPatch\UsefulPathsPatch\bin\Debug\UsefulPathsPatch.pdb
+D:\Projets\Harmony\Valheim\UsefulPathsPatch\UsefulPathsPatch\bin\Debug\0Harmony.dll
+D:\Projets\Harmony\Valheim\UsefulPathsPatch\UsefulPathsPatch\bin\Debug\assembly_valheim.dll
+D:\Projets\Harmony\Valheim\UsefulPathsPatch\UsefulPathsPatch\bin\Debug\BepInEx.dll
+D:\Projets\Harmony\Valheim\UsefulPathsPatch\UsefulPathsPatch\bin\Debug\UnityEngine.CoreModule.dll
+D:\Projets\Harmony\Valheim\UsefulPathsPatch\UsefulPathsPatch\bin\Debug\UnityEngine.dll
+D:\Projets\Harmony\Valheim\UsefulPathsPatch\UsefulPathsPatch\bin\Debug\UnityEngine.PhysicsModule.dll
+D:\Projets\Harmony\Valheim\UsefulPathsPatch\UsefulPathsPatch\obj\Debug\UsefulPathsPatch.csproj.AssemblyReference.cache
+D:\Projets\Harmony\Valheim\UsefulPathsPatch\UsefulPathsPatch\obj\Debug\UsefulPathsPatch.csproj.CoreCompileInputs.cache
+D:\Projets\Harmony\Valheim\UsefulPathsPatch\UsefulPathsPatch\obj\Debug\UsefulPathsPatch.csproj.CopyComplete
+D:\Projets\Harmony\Valheim\UsefulPathsPatch\UsefulPathsPatch\obj\Debug\UsefulPathsPatch.dll
+D:\Projets\Harmony\Valheim\UsefulPathsPatch\UsefulPathsPatch\obj\Debug\UsefulPathsPatch.pdb

@@ -24,12 +24,8 @@ namespace UsefulPaths
 	public class UsefulPaths : BaseUnityPlugin
 	{
 		private const float groundCheckRate = 0.4f;
-
 		public static SortedDictionary<PathTypes, Dictionary<string, ConfigEntry<float>>> pathMultiplierConfigs { get; private set; } = new SortedDictionary<PathTypes, Dictionary<string, ConfigEntry<float>>>();
-
-
 		public static PathTypes currentGroundTerrain { get; private set; } = PathTypes.None;
-
 
 		private void Awake()
 		{
@@ -65,9 +61,6 @@ namespace UsefulPaths
 			{
 				//string text = TerrainModifier.FindClosestModifierPieceInRange(Player.m_localPlayer.transform.position, 6f)?.m_name?.Replace("$piece_", string.Empty);
 				Collider lastGroundCollider = Player.m_localPlayer.GetLastGroundCollider();
-				Heightmap actualHeightMap = Heightmap.FindHeightmap(Player.m_localPlayer.transform.position);
-				actualHeightMap.WorldToVertex(Player.m_localPlayer.transform.position, out var x, out var y);
-				Color paintMaskColor = actualHeightMap.GetPaintMask(x, y);
 				WearNTear wearNTear = null;
 				if ((UnityEngine.Object)(object)lastGroundCollider != null)
 				{
@@ -76,19 +69,24 @@ namespace UsefulPaths
 				if (wearNTear != null && Enum.TryParse<PathTypes>(wearNTear.m_materialType.ToString(), ignoreCase: true, out var result))
 				{
 					currentGroundTerrain = result;
+					return;
 				}
-				else if (paintMaskColor.r > 0.5)
+
+				Heightmap actualHeightMap = Heightmap.FindHeightmap(Player.m_localPlayer.transform.position);
+				actualHeightMap.WorldToVertex(Player.m_localPlayer.transform.position, out var x, out var y);
+				Color paintMaskColor = actualHeightMap.GetPaintMask(x, y);
+				if (paintMaskColor.r > 0.5)
 				{
 					currentGroundTerrain = PathTypes.Path;
+					return;
 				}
-				else if (paintMaskColor.b > 0.5)
+				if (paintMaskColor.b > 0.5)
 				{
 					currentGroundTerrain = PathTypes.PavedRoad;
+					return;
 				}
-				else
-				{
-					currentGroundTerrain = PathTypes.None;
-				}
+				
+				currentGroundTerrain = PathTypes.None;
 			}
 		}
 	}

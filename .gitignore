@@ -1,3 +1,4 @@
 UsefulPathsPatch/libs/*
+UsefulPathsPatch/bin/Debug/*
 
-!UsefulPathsPatch/libs/UsefulPathsPatch.dll
+!UsefulPathsPatch/bin/Debug/UsefulPathsPatch.dll

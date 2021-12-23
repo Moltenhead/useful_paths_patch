@@ -1,0 +1,3 @@
+UsefulPathsPatch/libs/*
+
+!UsefulPathsPatch/libs/UsefulPathsPatch.dll

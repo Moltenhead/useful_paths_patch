@@ -67,7 +67,7 @@ namespace UsefulPaths
 				Collider lastGroundCollider = Player.m_localPlayer.GetLastGroundCollider();
 				Heightmap actualHeightMap = Heightmap.FindHeightmap(Player.m_localPlayer.transform.position);
 				actualHeightMap.WorldToVertex(Player.m_localPlayer.transform.position, out var x, out var y);
-				Color heightmapColor = actualHeightMap.GetPaintMask(x, y);
+				Color paintMaskColor = actualHeightMap.GetPaintMask(x, y);
 				WearNTear wearNTear = null;
 				if ((UnityEngine.Object)(object)lastGroundCollider != null)
 				{
@@ -77,11 +77,11 @@ namespace UsefulPaths
 				{
 					currentGroundTerrain = result;
 				}
-				else if (heightmapColor.r > 0.7)
+				else if (paintMaskColor.r > 0.5)
 				{
 					currentGroundTerrain = PathTypes.Path;
 				}
-				else if (heightmapColor.b > 0.7)
+				else if (paintMaskColor.b > 0.5)
 				{
 					currentGroundTerrain = PathTypes.PavedRoad;
 				}
